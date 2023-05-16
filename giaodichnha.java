@@ -1,16 +1,14 @@
 package BAI1;
-import java.util.Scanner;
 
-
-public class giaodichnha extends giaodich {
+public class GiaodichNha extends Giaodich {
     private String loaiNha, diaChi;
     private int choose;
      
-    public giaodichnha() {
+    public GiaodichNha() {
         super();
     }
  
-    public giaodichnha(String loaiNha, String diaChi) {
+    public GiaodichNha(String loaiNha, String diaChi) {
         super();
         this.loaiNha = loaiNha;
         this.diaChi = diaChi;
@@ -33,27 +31,26 @@ public class giaodichnha extends giaodich {
     }
      
     public void nhap() {
-    	Scanner scanner = new Scanner(System.in);
         super.nhap();
-        System.out.print("Nhập địa chỉ: ");
+        System.out.print("Nhap dia chi: ");
         diaChi = scanner.nextLine();
-        System.out.print("Nhập loại nhà (0: cao cấp, 1: thường): ");
+        System.out.print("Nhap loai nha (0: cao cap, 1: thuong): ");
         choose = scanner.nextInt();
         switch (choose) {
             case 0:
-                loaiNha = "cao cấp";
+                loaiNha = "cao cap";
                 break;
             case 1: 
-                loaiNha = "thường";
+                loaiNha = "thuong";
                 break;
             default:
-                System.out.println("Chọn số không hợp lệ.");
+                System.out.println("Chon so khong hop le.");
                 break;
         }
     }
      
     @Override
     public String toString() {
-        return super.toString() + ", loại nhà: " + this.loaiNha + ", địa chỉ: " + this.diaChi;
+        return super.toString() + ", loai nha: " + this.loaiNha + ", dia chi: " + this.diaChi;
     }
 }
