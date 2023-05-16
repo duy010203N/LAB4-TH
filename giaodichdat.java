@@ -1,15 +1,13 @@
 package BAI1;
 
-import java.util.Scanner;
-
-public class giaodichdat extends giaodich {
+public class GiaodichDat extends Giaodich {
     private String loaiDat;
  
-    public giaodichdat() {
+    public GiaodichDat() {
         super();
     }
  
-    public giaodichdat(String loaiDat) {
+    public GiaodichDat(String loaiDat) {
         super();
         this.loaiDat = loaiDat;
     }
@@ -23,15 +21,13 @@ public class giaodichdat extends giaodich {
     }
      
     public void nhap() {
-    	Scanner scanner = new Scanner(System.in);
-
         super.nhap();
-        System.out.print("Nhập loại đất (A/B/C): ");
+        System.out.print("Nhap loai dat (A/B/C): ");
         loaiDat = scanner.nextLine();
     }
  
     @Override
     public String toString() {
-        return super.toString() + ", loại đất: " + this.loaiDat;
+        return super.toString() + ", loai dat: " + this.loaiDat;
     }
 }
